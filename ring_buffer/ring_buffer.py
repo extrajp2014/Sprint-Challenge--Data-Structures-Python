@@ -32,13 +32,15 @@ class RingBuffer:
 
 class ArrayRingBuffer:
     def __init__(self, capacity):
-        pass
+        self.capacity = capacity
+        self.storage = [None for i in range(capacity)]
+        self.current = len(self.storage)
 
     def append(self, item):
         pass
 
     def get(self):
-        pass
+        return [data for data in self.storage if data != None]
 
 def test_case():
     '''
@@ -56,5 +58,6 @@ def test_case():
     buffer.append('e')
     buffer.append('f')
     assert buffer.get() == ['d', 'e', 'f']
+    print("passed test cases")
 
 test_case()
