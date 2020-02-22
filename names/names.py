@@ -39,21 +39,22 @@ f = open('names_2.txt', 'r')
 names_2 = f.read().split("\n")  # List containing 10000 names
 f.close()
 
-print("-------------Original--------------")
-start_time = time.time()
-duplicates = []  # Return the list of duplicates in this data structure
+# print("-------------Original--------------")
+# start_time = time.time()
+# duplicates = []  # Return the list of duplicates in this data structure
 
-# Replace the nested for loops below with your improvements
-for name_1 in names_1:
-    for name_2 in names_2:
-        if name_1 == name_2:
-            duplicates.append(name_1)
-# runtime: 9.031611204147339 seconds
+# # Replace the nested for loops below with your improvements
+# for name_1 in names_1:
+#     for name_2 in names_2:
+#         if name_1 == name_2:
+#             duplicates.append(name_1)
+# # runtime: 9.031611204147339 seconds
+# # runtime for starter code is O(n^2)
 
-end_time = time.time()
-duplicates.sort()
-print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
-print (f"runtime: {end_time - start_time} seconds")
+# end_time = time.time()
+# duplicates.sort()
+# print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
+# print (f"runtime: {end_time - start_time} seconds")
 
 print("\n--------------Improved Version--------------")
 start_time = time.time()
